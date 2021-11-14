@@ -1,0 +1,28 @@
+* {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+p {
+  margin-bottom: 25px;
+}
+
+div {
+  margin-bottom: 15px;
+}
+
+a{
+  position: absolute;
+  left: 50%;
+  color: #ffffff;
+  text-decoration: none;
+  background-color: lightslategray;
+  padding: 8px 15px;
+  border-radius: 20px;
+  bottom: 50px;
+  transform: translate(-50%, 0);
+}
+a:hover
+{
+  background-color: lightcoral;
+  color: #ffffff;
+}

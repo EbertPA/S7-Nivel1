@@ -1,0 +1,4 @@
+<button (click)="actualiza(1)">+</button>
+<input type="text" name="num" [(ngModel)]="numPage" (change)="compruebaInput(numPage)">
+<button (click)="actualiza(-1)">-</button>
+<span *ngIf="numValid" class="mesageError">{{ error }}</span>

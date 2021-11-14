@@ -1,0 +1,65 @@
+* {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.welcome {
+  position: relative;
+  height: 80vh;
+  background-color: lightslategray;
+  color: #ffffff;
+  padding: 50px;
+}
+
+.descripcion{
+  text-justify: auto;
+  text-align: justify;
+}
+
+// .boton_inicio{
+//   position: absolute;
+//   left: 50%;
+//   bottom: 25px;
+//   transform: translate(-50%, 0);
+//   width: 80px;
+//   height: 30px;
+//   border-radius: 10px;
+// }
+
+.boton_inicio:hover{
+  background-color: rgb(245, 163, 163);
+  color: #ffffff;
+}
+
+button{
+  border: 1px solid lightslategray;
+  border-radius: 20px;
+  width: 25%;
+  height: 30px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover{
+  font-size: 16px;
+  background-color: rgb(209, 206, 206);
+}
+
+h2 {
+  text-align: center;
+}
+
+a{
+  position: absolute;
+  left: 50%;
+  color: #0060B6;
+  text-decoration: none;
+  background-color: #ffffff;
+  padding: 8px 15px;
+  border-radius: 20px;
+  bottom: 25px;
+  transform: translate(-50%, 0);
+}
+a:hover
+{
+  background-color: lightcoral;
+  color: #ffffff;
+}

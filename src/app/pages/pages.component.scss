@@ -1,0 +1,28 @@
+input{
+  min-width: 36px;
+  max-width: 40px;
+  text-align: center;
+  border: none;
+  font-size: 20px;
+}
+
+span {
+  display: block;
+}
+
+button {
+  font-size: 22px;
+  border-color: lightsalmon;
+  background-color: lightsalmon;
+  color: #ffffff;
+  border-radius: 5px;
+  width: 30px;
+  text-align: center;
+  font-weight: bold;
+  margin: 0 5px;
+}
+
+.mesageError{
+  color: red;
+  font-size: 12px;
+}

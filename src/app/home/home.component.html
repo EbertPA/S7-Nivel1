@@ -1,0 +1,16 @@
+<p>¿Qué quieres hacer?</p>
+<div *ngFor="let service of services; index as i">
+  <input type="checkbox" [checked]="false" (click)="addService(service, i)">
+  <label>{{ service.description }} ({{ service.price }}€)</label>
+  <app-panel
+    (pageSelected)="onPageSelected($event)"
+    (languageSelected)="onLanguageSelected($event)"
+    *ngIf="service.id === '1' && pageWebSelected">
+  </app-panel>
+</div>
+<div>
+  <p>
+    Precio: {{ total }}€
+  </p>
+</div>
+<a routerLink="/welcome">Volver al inicio</a>

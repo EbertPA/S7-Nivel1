@@ -1,0 +1,10 @@
+<form [formGroup]="validaForm" (ngSubmit)="enviar()" class="contenedor">
+  <div class="input-group">
+    <label for="">Número de páginas </label>
+    <app-pages (onNewNumber)="pages($event, 'pages')"></app-pages>
+  </div>
+  <div>
+    <label for="">Número de idiomas </label>
+    <app-pages (onNewNumber)="languages($event, 'languages')"></app-pages>
+  </div>
+</form>

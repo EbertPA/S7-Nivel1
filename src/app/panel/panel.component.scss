@@ -1,0 +1,42 @@
+.contenedor {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+  border: 4px solid #000000;
+  border-radius: 20px;
+  padding: 30px;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.mesageError{
+  color: red;
+  font-size: 12px;
+}
+
+// input{
+//   min-width: 22px;
+//   max-width: 30px;
+//   text-align: center;
+//   border: none;
+//   overflow:auto;
+// }
+
+// span {
+//   display: block;
+// }
+
+// button {
+//   font-size: 22px;
+//   border-color: lightsalmon;
+//   background-color: lightsalmon;
+//   color: #ffffff;
+//   border-radius: 5px;
+//   width: 30px;
+//   text-align: center;
+//   font-weight: bold;
+//   margin: 0 5px;
+// }
