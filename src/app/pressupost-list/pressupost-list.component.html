@@ -1,0 +1,35 @@
+<div class="d-flex justify-content-around mb-2">Ordenar</div>
+<div class="d-flex justify-content-around">
+  <button type="button" class="btn btn-outline-secondary btn-sm mx-2"
+    (click)="alfabeticamente()">Alfabeticamente</button>
+  <button type="button" class="btn btn-outline-secondary btn-sm mx-2" (click)="porFecha()">Por fecha</button>
+  <button type="button" class="btn btn-outline-secondary btn-sm" (click)="reiniciar()">Reiniciar</button>
+</div>
+<form autocomplete="off" (ngSubmit)="buscar()" class="d-flex my-2" *ngIf="arrayPresupuestos.length > 0">
+  <input class="form-control" type="text" name="nombre" placeholder="Buscar nombre" [(ngModel)]="searchName">
+</form>
+<div class="alert alert-danger mt-2" *ngIf="encontrado">
+  No se encuentró nada con el nombre {{ searchName }}
+</div>
+
+<table class="table table-striped">
+  <thead *ngIf="arrayPresupuestos.length > 0">
+    <tr>
+      <th scope="col">Fecha</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Cliente</th>
+      <th scope="col">NºServ.</th>
+      <th scope="col">Total</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of arrayPresupuestos; index as i">
+      <!-- <th scope="row">{{ item.date | date: 'd/M/yy' }}</th> -->
+      <td>{{ item.date | date: 'd/M/yy' }}</td>
+      <td>{{ item.name }}</td>
+      <td>{{item.customer }}</td>
+      <td>{{ item.service.length }}</td>
+      <td>{{ item.total | currency: 'EUR' }}</td>
+    </tr>
+  </tbody>
+</table>

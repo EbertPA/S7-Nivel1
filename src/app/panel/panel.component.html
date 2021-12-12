@@ -1,10 +1,22 @@
 <form [formGroup]="validaForm" (ngSubmit)="enviar()" class="contenedor">
   <div class="input-group">
-    <label for="">Número de páginas </label>
-    <app-pages (onNewNumber)="pages($event, 'pages')"></app-pages>
+    <div>
+      <label for="">Número de páginas </label>
+    </div>
+    <div class="d-flex">
+      <app-pages (onNewNumber)="pages($event, 'pages')"></app-pages>
+      <app-modal [message]="'En este componente debe indicar el número de páginas que tendrá su sitio web.'">
+      </app-modal>
+    </div>
   </div>
-  <div>
-    <label for="">Número de idiomas </label>
-    <app-pages (onNewNumber)="languages($event, 'languages')"></app-pages>
+  <div class="input-group">
+    <div>
+      <label for="">Número de idiomas </label>
+    </div>
+    <div class="d-flex">
+      <app-pages (onNewNumber)="languages($event, 'languages')"></app-pages>
+      <app-modal [message]="'En este componente debe indicar el número de idiomas que tendrá su sitio web.'">
+      </app-modal>
+    </div>
   </div>
 </form>

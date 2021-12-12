@@ -42,9 +42,15 @@ export class PanelComponent implements OnInit {
     this.numPages = numPages;
     this.enviar(this.numPages, namepages);
   }
+
   languages(numLanguages: number, namelang: string){
     this.numLanguages = numLanguages;
     this.enviar(this.numLanguages, namelang);
   }
+
+  modal(event: Event){
+    console.log('MODAL ',event);
+  }
+
 
 }

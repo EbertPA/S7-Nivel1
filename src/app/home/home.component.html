@@ -1,16 +1,49 @@
-<p>¿Qué quieres hacer?</p>
-<div *ngFor="let service of services; index as i">
-  <input type="checkbox" [checked]="false" (click)="addService(service, i)">
-  <label>{{ service.description }} ({{ service.price }}€)</label>
-  <app-panel
-    (pageSelected)="onPageSelected($event)"
-    (languageSelected)="onLanguageSelected($event)"
-    *ngIf="service.id === '1' && pageWebSelected">
-  </app-panel>
+<div class="container my-2">
+  <div class="row">
+    <div class="col-md-5">
+      <p>¿Qué quieres hacer?</p>
+      <form (ngSubmit)="onRegister()" #myBudget="ngForm">
+        <div>
+        </div>
+        <div>
+          <label class="names">Nombre del presupuesto</label>
+          <input type="text" #nameInput="ngModel" required name="namePresupuesto" id="namePresupuesto"
+            [(ngModel)]="namePresupuesto">
+          <p class="message-error" [class.invalid]="nameInput.invalid" *ngIf="nameInput.touched">El campo es requerido
+          </p>
+        </div>
+        <div>
+          <label class="names">Cliente</label>
+          <input type="text" #nameCliente="ngModel" required name="cliente" id="cliente"
+          [(ngModel)]="cliente">
+          <p class="message-error" [class.invalid]="nameCliente.invalid" *ngIf="nameCliente.touched">El campo es
+            requerido</p>
+        </div>
+      </form>
+      <div *ngFor="let service of services; index as i">
+        <input #checkboxes type="checkbox" [checked]="false" (click)="addService(service, i)">
+        <label>{{ service.description }} ({{ service.price }}€)</label>
+        <app-panel (pageSelected)="onPageSelected($event)" (languageSelected)="onLanguageSelected($event)"
+          *ngIf="service.id === '1' && pageWebSelected">
+        </app-panel>
+      </div>
+      <div>
+        <p>
+          Precio: {{ total }}€
+        </p>
+      </div>
+      <button [disabled]="myBudget.invalid || total===0" type="submit" class="btn btn-outline-secondary btn-sm mx-2"
+        (click)="addToBudget()">Añadir presupuesto</button>
+
+    </div>
+
+    <div class="col-md-7">
+      <app-pressupost-list></app-pressupost-list>
+    </div>
+
+    <div class="col-md-12 position-relative mt-4">
+      <!-- <a routerLink="/welcome" class="position-absolute bottom-0 start-50 translate-middle-x">Volver al inicio</a> -->
+      <a routerLink="/welcome" class="start-50 translate-middle-x">Volver al inicio</a>
+    </div>
+  </div>
 </div>
-<div>
-  <p>
-    Precio: {{ total }}€
-  </p>
-</div>
-<a routerLink="/welcome">Volver al inicio</a>

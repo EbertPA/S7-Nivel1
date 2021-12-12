@@ -1,11 +1,15 @@
 .contenedor {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  margin: 20px 0;
+  min-width: 240px;
+  max-width: 350px;
+  margin: 15px 0;
   border: 4px solid #000000;
   border-radius: 20px;
-  padding: 30px;
+  padding: 25px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
 }
 
 .input-group {
@@ -16,27 +20,3 @@
   color: red;
   font-size: 12px;
 }
-
-// input{
-//   min-width: 22px;
-//   max-width: 30px;
-//   text-align: center;
-//   border: none;
-//   overflow:auto;
-// }
-
-// span {
-//   display: block;
-// }
-
-// button {
-//   font-size: 22px;
-//   border-color: lightsalmon;
-//   background-color: lightsalmon;
-//   color: #ffffff;
-//   border-radius: 5px;
-//   width: 30px;
-//   text-align: center;
-//   font-weight: bold;
-//   margin: 0 5px;
-// }

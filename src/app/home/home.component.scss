@@ -9,10 +9,11 @@ p {
 div {
   margin-bottom: 15px;
 }
+.names {
+  display: block;
+}
 
 a{
-  position: absolute;
-  left: 50%;
   color: #ffffff;
   text-decoration: none;
   background-color: lightslategray;
@@ -25,4 +26,14 @@ a:hover
 {
   background-color: lightcoral;
   color: #ffffff;
+}
+
+.message-error {
+  color: red;
+  font-size: 12px;
+  opacity: 0;
+  transition: all linear .5s;
+  &.invalid {
+    opacity: 1;
+  }
 }

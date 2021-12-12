@@ -9,6 +9,9 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { PanelComponent } from './panel/panel.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { PagesComponent } from './pages/pages.component';
+import { ModalComponent } from './modal/modal.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { PressupostListComponent } from './pressupost-list/pressupost-list.component';
 
 @NgModule({
   declarations: [
@@ -17,13 +20,16 @@ import { PagesComponent } from './pages/pages.component';
     PageNotFoundComponent,
     PanelComponent,
     WelcomeComponent,
-    PagesComponent
+    PagesComponent,
+    ModalComponent,
+    PressupostListComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
