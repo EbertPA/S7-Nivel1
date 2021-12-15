@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-md-5">
       <p>¿Qué quieres hacer?</p>
-      <form (ngSubmit)="onRegister()" #myBudget="ngForm">
+      <form #myBudget="ngForm">
         <div>
         </div>
         <div>
@@ -34,7 +34,6 @@
       </div>
       <button [disabled]="myBudget.invalid || total===0" type="submit" class="btn btn-outline-secondary btn-sm mx-2"
         (click)="addToBudget()">Añadir presupuesto</button>
-
     </div>
 
     <div class="col-md-7">
@@ -42,7 +41,6 @@
     </div>
 
     <div class="col-md-12 position-relative mt-4">
-      <!-- <a routerLink="/welcome" class="position-absolute bottom-0 start-50 translate-middle-x">Volver al inicio</a> -->
       <a routerLink="/welcome" class="start-50 translate-middle-x">Volver al inicio</a>
     </div>
   </div>
